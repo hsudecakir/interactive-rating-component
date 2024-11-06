@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+  --white: #FFFFFF;
+  --very-dark-blue: #131518;
+  --dark-blue: #262E38;
+  --light-gray: #969FAD;
+  --orange: #FC7614;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+  font-family: "Overpass", sans-serif;
+  background-color: var(--very-dark-blue);
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*{
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+
+.container{
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.thanks-container, .rating-container{
+  background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
+  border-radius: 15px;
+  padding: 24px 24px 32px;
+}
+
+.star{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--dark-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.star i{
+  color: var(--orange);
+  font-size: 14px;
+}
+
+.rating-container h1{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30.38px;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.rating-container p{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--light-gray);
+  margin-bottom: 24px;
+}
+
+.rating{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.rating-box{
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: var(--dark-blue);
+  color: var(--light-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.17499999701976776px;
+  cursor: pointer;
+}
+
+.rating-box.selected{
+  background-color: var(--white);
+  color: var(--dark-blue);
+  cursor: inherit;
+}
+
+.rating-container button{
+  width: 100%;
+  background-color: var(--orange);
+  color: var(--very-dark-blue);
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17.72px;
+  letter-spacing: 1.8666666746139526px;
+  border-radius: 22.5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.thanks-container{
+  display: none;
+  padding: 34px 24px 37px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thanks-container img{
+  margin-bottom: 24px;
+}
+
+.thanks-container p{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--light-gray);
+  text-align: center;
+}
+
+#rateText{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--orange);
+  padding: 5px 12px;
+  border-radius: 22.5px;
+  background-color: var(--dark-blue);
+  margin-bottom: 24px;
+}
+
+.thanks-container .thank-you-txt{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30.38px;
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+body.submit-page .rating-container{
+  display: none;
+}
+
+body.submit-page .thanks-container{
+  display: flex;
+}
+
+@media only screen and (min-width: 1025px){
+  .thanks-container, .rating-container{
+    padding: 32px 32px 39px;
+    width: 412px;
+  }
+  .star{
+    width: 48px;
+    height: 48px;
+    margin-bottom: 30px;
+  }
+  .star i{
+    font-size: 17px;
+  }
+  .rating-container h1{
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 35.45px;
+    margin-bottom: 7px;
+  }
+  .rating-container p{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .rating{
+    margin-bottom: 32px;
+  }
+  .rating-box{
+    width: 51px;
+    height: 51px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.20000000298023224px;
+  }
+  .rating-box:hover{
+    background-color: var(--orange);
+    color: var(--dark-blue);
+  }
+  .rating-container button{
+    padding: 15px 0 11px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 18.99px;
+    letter-spacing: 2px;
+  }
+  .rating-container button:hover{
+    background-color: var(--white);
+  }
+  .rating-box.selected:hover{
+    background-color: var(--white);
+  }
+  .thanks-container{
+    padding: 45px 40px 45px 32px;
+  }
+  .thanks-container img{
+    margin-bottom: 32px;
+  }
+  .thanks-container p{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  #rateText{
+    padding: 4px 20px;
+    margin-bottom: 32px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .thanks-container .thank-you-txt{
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 35.45px;
+    margin-bottom: 7px;
+  }
+}
